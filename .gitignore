@@ -1,0 +1,14 @@
+# system and python stuff
+*.pyc
+*__pycache__*
+.DS_Store
+
+# mesh and image files
+*.Vt.
+*.nerd
+
+# other library stuff from the matlab 
+*.mexmaci64
+
+
+

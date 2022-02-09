@@ -1,0 +1,6 @@
+[submodule "iso2mesh"]
+	path = iso2mesh
+	url = https://github.com/fangq/iso2mesh
+[submodule "vtkwrite"]
+	path = vtkwrite
+	url = https://github.com/joe-of-all-trades/vtkwrite.git
