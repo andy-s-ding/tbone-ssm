@@ -41,7 +41,7 @@ KEY: (comments), <naming convention variable>, [optional]
 Currently, `buildtboneSSM_groundtruth.m` and `buildtboneSSM_propagated.m` are used to generate SSMs from ground truth and label-propagated segmentations, respectively. Several variables (including but not limited to side, template ID, target IDs to exclude, and segment IDs) are currently hand-coded. In the future, `SSM_tbone.m` will be used as a wrapper for the aforementioned scripts.
 
 We have extended the Siewerdsen Lab's SSM generation code in the following ways:
-  - Compatibility with segments contralateral to the template's side
-  - Compatibility with multiple segment IDs for multi-structure SSM generation
+  - Introduced compatibility with segments contralateral to the template's side
+  - Modified `nrrdread.m` to support multiple segment IDs for multi-structure SSM generation
   - Optimized non-rigid CPD step with `beta=4` and `lambda=3`
   - Improved SSM visualization in `explore_ssm.m` with capability of writing SSM-generated meshes
