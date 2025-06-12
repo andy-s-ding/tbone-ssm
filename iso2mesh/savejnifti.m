@@ -5,7 +5,7 @@ function savejnifti(jnii, filename, varargin)
 %    savejnifti(jnii, outputfile, 'Param1',value1, 'Param2',value2,...)
 %
 %    Save an in-memory JNIfTI structure into a JNIfTI file with format
-%    defined in JNIfTI specification: https://github.com/fangq/jnifti
+%    defined in JNIfTI specification: https://github.com/NeuroJSON/jnifti
 %
 %    author: Qianqian Fang (q.fang <at> neu.edu)
 %
@@ -22,7 +22,7 @@ function savejnifti(jnii, filename, varargin)
 %                *.bnii for binary JNIfTI file
 %                *.jnii for text JNIfTI file
 %        options: (optional) if saving to a .bnii file, please see the options for
-%               saveubjson.m (part of JSONLab); if saving to .jnii, please see the 
+%               savebj.m (part of JSONLab); if saving to .jnii, please see the 
 %               supported options for savejson.m (part of JSONLab).
 %
 %    example:
@@ -30,9 +30,9 @@ function savejnifti(jnii, filename, varargin)
 %        savejnifti(jnii, 'magic10.jnii')
 %        savejnifti(jnii, 'magic10_debug.bnii','Debug',1)
 %
-%    this file is part of JNIfTI specification: https://github.com/fangq/jnifti
+%    this file is part of JNIfTI specification: https://github.com/NeuroJSON/jnifti
 %
-%    License: Apache 2.0, see https://github.com/fangq/jnifti for details
+%    License: Apache 2.0, see https://github.com/NeuroJSON/jnifti for details
 %
 
 if(nargin<2)

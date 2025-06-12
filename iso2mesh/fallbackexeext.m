@@ -23,6 +23,9 @@ end
 if(strcmp(exesuff,'.mexmaci64') && exist([mcpath(exename) exesuff],'file')==0) % fall back to i386 mac
         exesuff='.mexmaci';
 end
+if(strcmp(exesuff,'.mexmaca64') && exist([mcpath(exename) exesuff],'file')==0) % fall back to i386 mac
+        exesuff='.mexmaci64';
+end
 if(strcmp(exesuff,'.mexmaci') && exist([mcpath(exename) exesuff],'file')==0) % fall back to ppc mac
         exesuff='.mexmac';
 end

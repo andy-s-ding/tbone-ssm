@@ -6,7 +6,7 @@
 **      Department of Bioengineering
 **      Northeastern University
 **      360 Huntington Ave, Boston, MA 02115
-*'''Version''': 1.9.5 (Lion's Head)
+*'''Version''': 1.9.6 (Lion's Head)
 *'''License''': GPL v2 or later (see COPYING) 
 **      (this license does not cover the binaries under the bin/ 
 **       directory, see Section III for more details)
@@ -61,12 +61,12 @@ are even more popular than Iso2Mesh itself. For example:
  encoder and decoder ([https://www.mathworks.com/matlabcentral/fileexchange/33381-jsonlab-a-toolbox-to-encode-decode-json-files Editor Pick-of-the-week, Popular Files 2018])
 * Brain2Mesh (http://mcx.space/brain2mesh): a fully automated \
  high-quality brain mesh generation toolbox built on Iso2Mesh
-* JNIfTI (http://github.com/fangq/jnifti): a fast and portable \
+* JNIfTI (http://github.com/NeuroJSON/jnifti): a fast and portable \
  NIfTI-1/2 reader/writer and next-gen NIfTI file format
 * Metch (http://iso2mesh.sf.net/metch): a 3D mesh registration toolbox
 * JData specification (http://openjdata.org): a highly portable \
  easy-to-use scientific data annotation method and specification
-* ZMat (http://github.com/fangq/zmat): a data compression library \
+* ZMat (http://github.com/NeuroJSON/zmat): a data compression library \
  and MATLAB/Octave toolbox
 
 Currently, Iso2Mesh and its submodules are broadly distributed 
@@ -286,6 +286,13 @@ other modules are under the Lesser General Public License (LGPL)
 *License: LGPL (GNU Lesser General Public License)
 *URL:http://gts.sourceforge.net/
 *Author: GTS developers
+
+=== bin/PoissonRecon ===
+
+*Summary: Screened Poisson Surface Reconstruction (Version 8.0)
+*License: MIT
+*URL:http://www.cs.jhu.edu/~misha/Code/PoissonRecon/Version8.0/
+*Author: Michael Kazhdan (http://www.cs.jhu.edu/~misha/)
 
 
 Note: Iso2Mesh and the above meshing utilities are considered 

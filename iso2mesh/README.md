@@ -7,7 +7,7 @@
 | **Department** | Bioengineering           |
 | **Institute**  | Northeastern University  |
 | **Address**    | 360 Huntington Ave, Boston, MA 02115 |
-| **Version**    | 1.9.5 (Lion's Head - beta)      |
+| **Version**    | 1.9.6 (Lion's Head)      |
 | **License**    | GPL v2 or later (see COPYING) (this license does not cover the binaries under the bin/ directory, see Section III for more details) |
 | **URL**        | http://iso2mesh.sf.net   |
 
@@ -65,12 +65,12 @@ are even more popular than Iso2Mesh itself. For example:
  encoder and decoder [(Editor Pick-of-the-week, Popular File 2018)](https://www.mathworks.com/matlabcentral/fileexchange/33381-jsonlab-a-toolbox-to-encode-decode-json-files)
 - Brain2Mesh (http://mcx.space/brain2mesh): a fully automated
  high-quality brain mesh generation toolbox built on Iso2Mesh
-- JNIfTI (http://github.com/fangq/jnifti): a fast and portable 
+- JNIfTI (http://github.com/NeuroJSON/jnifti): a fast and portable 
  NIfTI-1/2 reader/writer and next-gen NIfTI file format
 - Metch (http://iso2mesh.sf.net/metch): a 3D mesh registration toolbox
 - JData specification (http://openjdata.org): a highly portable
  easy-to-use scientific data annotation method and specification
-- ZMat (http://github.com/fangq/zmat): a data compression library 
+- ZMat (http://github.com/NeuroJSON/zmat): a data compression library 
  and MATLAB/Octave toolbox
 
 Currently, Iso2Mesh and its submodules are broadly distributed 
@@ -170,7 +170,7 @@ Linux distributions, you can recreate the mesh utility binaries under
 `iso2mesh/bin` folder using the source codes provided under `iso2mesh/tools`
 by following the below commands:
 
- ```  
+ ```
 git clone --recurse-submodules https://github.com/fangq/iso2mesh.git
 cd iso2mesh
 rm -rf bin/*.mex* bin/*.exe
@@ -181,13 +181,13 @@ make
 
 This will download and recompile the below binaries in the bin folder:
 
- - cgalmesh
- - cgalsurf
- - cgalsimp2
- - jmeshlib
- - meshfix
- - tetgen1.5
- - cork
+- cgalmesh
+- cgalsurf
+- cgalsimp2
+- jmeshlib
+- meshfix
+- tetgen1.5
+- cork
 
 Once these binary files are recreated, you can run all the major functionalities
 of Iso2Mesh. The gtrefine utility is depreciated and replaced by 
@@ -232,28 +232,28 @@ below:
 
 - Summary: cgalsurf is a utility to extract a surface mesh from a gray-scale or a binary 3D image
 - Source: it is a slightly modified version from Surface_mesher example from CGAL 3.4
-- License: CGAL v3 core library is licensed under QPL (Q Public License) other modules are under the Lesser General Public License (LGPL)
+- License: CGAL is licensed under General Public License (GPL) version 3 or later; many of its core modules are under the Lesser General Public License (LGPL)
 - URL: http://www.cgal.org/Manual/3.3/doc_html/cgal_manual/Surface_mesher/Chapter_main.html
 
 > bin/cgalmesh and bin/cgalpoly:
 
 - Summary: cgalmesh and cgalpoly are utilities to produce surface and volumetric meshes from a multi-valued volumetric image
-- Source: it is a slightly modified version from Mesh_3 example from CGAL 3.5
-- License: CGAL v3 core library is licensed under QPL (Q Public License) other modules are under the Lesser General Public License (LGPL)
-- URL: http://www.cgal.org/Manual/3.5/doc_html/cgal_manual/Mesh_3/Chapter_main.html
+- Source: it is a slightly modified version from Mesh_3 example from CGAL 5.3
+- License: CGAL is licensed under General Public License (GPL) version 3 or later; many of its core modules are under the Lesser General Public License (LGPL)
+- URL: https://doc.cgal.org/latest/Mesh_3/
 
 > bin/cgalsimp2:
 
 - Summary: cgalsimp2 performs surface mesh simplification in iso2mesh.
 - Source: it is adapted from Surface_mesh_simplification example of CGAL library
-- License: CGAL v3 core library is licensed under QPL (Q Public License) other modules are under the Lesser General Public License (LGPL)
-- URL: http://www.cgal.org/Manual/3.4/doc_html/cgal_manual/Surface_mesh_simplification/Chapter_main.html
+- License: CGAL is licensed under General Public License (GPL) version 3 or later; many of its core modules are under the Lesser General Public License (LGPL)
+- URL: https://doc.cgal.org/latest/Surface_mesh_simplification/index.html
 
 > bin/jmeshlib:
 
 - Summary: meshfix is adapted from the sample code of JMeshLib
 - License: GPL (GNU General Public License) v2 or later
-- URL:http://jmeshlib.sourceforge.net/
+- URL: http://jmeshlib.sourceforge.net/
 - Author:Marco Attene <attene at ge.imati.cnr.it>
 ::Istituto di Matematica Applicata e Tecnologie Informatiche
 ::Consiglio Nazionale delle Ricerche
@@ -264,7 +264,7 @@ below:
 
 - Summary: meshfix is a mesh-repairing utility
 - License: GPL (GNU General Public License) v2 or later
-- URL:http://code.google.com/p/meshfix/
+- URL: http://code.google.com/p/meshfix/
 - Author: Marco Attene, Mirko Windhoff and Axel Thielscher.
 ::Istituto di Matematica Applicata e Tecnologie Informatiche
 ::Consiglio Nazionale delle Ricerche
@@ -275,15 +275,22 @@ below:
 
 - Summary: A robust surface mesh Boolean operation algorithm
 - License: LGPL (GNU Lesser General Public License)
-- URL:https://github.com/gilbo/cork
+- URL: https://github.com/gilbo/cork
 - Author: Gilbert Bernstein
 
 > bin/gtsrefine:
 
 - Summary: GTS is the GNU Triangulated Surface Library
 - License: LGPL (GNU Lesser General Public License)
-- URL:http://gts.sourceforge.net/
+- URL: http://gts.sourceforge.net/
 - Author: GTS developers
+
+> bin/PoissonRecon:
+
+- Summary: Screened Poisson Surface Reconstruction (Version 8.0)
+- License: MIT
+- URL: http://www.cs.jhu.edu/~misha/Code/PoissonRecon/Version8.0/
+- Author: Michael Kazhdan (http://www.cs.jhu.edu/~misha/)
 
 
 **Note:** Iso2Mesh and the above meshing utilities are considered 

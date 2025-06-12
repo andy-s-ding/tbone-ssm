@@ -12,7 +12,7 @@ function jnii=jnifticreate(varargin)
 %    input:
 %        img: set the jnii.NIFTIData section
 %        'header_i': the header subfield name defined in the JNIfTI
-%                    specification, see https://github.com/fangq/jnifti
+%                    specification, see https://github.com/NeuroJSON/jnifti
 %        value_i: set the value for the specified JNIfTI header field
 %
 %    output:
@@ -20,13 +20,13 @@ function jnii=jnifticreate(varargin)
 %              if img is given, jnii also includes the NIFTIData field
 %
 %
-%    this file is part of JNIfTI specification: https://github.com/fangq/jnifti
+%    this file is part of JNIfTI specification: https://github.com/NeuroJSON/jnifti
 %
-%    License: Apache 2.0, see https://github.com/fangq/jnifti for details
+%    License: Apache 2.0, see https://github.com/NeuroJSON/jnifti for details
 %
 
 
-jnii=struct('NIFTIHeader',struct(), 'NIFTIData', []);
+jnii=struct(encodevarname('_DataInfo_'),struct(),'NIFTIHeader',struct(), 'NIFTIData', []);
 
 % jnii.NIFTIHeader.NIIHeaderSize=  0;
 % jnii.NIFTIHeader.A75DataTypeName=   'uint8';
@@ -75,6 +75,18 @@ jnii.NIFTIHeader.Affine(3,:)=    [0 0 1 0];
 jnii.NIFTIHeader.Name=           'default';
 jnii.NIFTIHeader.NIIFormat=      'jnifti';
 % jnii.NIFTIHeader.NIIExtender=    [0,0,0,0];
+
+datainfo.JNIFTIVersion='0.5';
+datainfo.Comment='Created by the NeuroJSON Project (https://neurojson.org)';
+datainfo.AnnotationFormat='https://neurojson.org/jnifti/draft-1';
+datainfo.SerialFormat='http://json.org';
+datainfo.Parser=struct('Python',[], ...
+                       'MATLAB',[], ...
+                       'JavaScript', 'https://github.com/NeuroJSON/jsdata',...
+                       'CPP', 'https://github.com/nlohmann/json');
+datainfo.Parser.Python={'https://pypi.org/project/jdata','https://pypi.org/project/bjdata'};
+datainfo.Parser.MATLAB={'https://github.com/NeuroJSON/jnifty','https://github.com/NeuroJSON/jsonlab'};
+jnii.(encodevarname('_DataInfo_'))=datainfo;
 
 if(nargin==0)
     return;
